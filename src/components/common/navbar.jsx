@@ -36,21 +36,14 @@ const NavBar = () => {
             <NavLink className="nav-item nav-link" to="/login">
               Login
             </NavLink>
+
+            <NavLink className="nav-item nav-link" to="/register">
+              Register
+            </NavLink>
           </div>
         </div>
       </div>
     </nav>
-    // <nav classNameName="navbar navbar-light bg-light">
-    //   <Link to="#" classNameName="navbar-brand">
-    //     Vidly
-    //   </Link>
-
-    //   <NavLink to="/movies">Movies</NavLink>
-
-    //   <NavLink to="/customers">Customers</NavLink>
-
-    //   <NavLink to="/rentals">Rentals</NavLink>
-    // </nav>
   );
 };
 
