@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { getMovies } from "../services/fakeMovieService";
-
+import { Link } from "react-router-dom";
 import MoviesTable from "./moviesTable";
 import Pagination from "./common/pagination";
 import paginate from "../utils/paginate";
@@ -58,6 +58,10 @@ class Movies extends Component {
     this.setState({ currentPage: page });
   };
 
+  handleSave = () => {
+    console.log("saved");
+  };
+
   render() {
     const {
       movies: allMovies,
@@ -90,6 +94,14 @@ class Movies extends Component {
           />
         </div>
         <div className="col">
+          <Link
+            to="/movies/new"
+            className="btn btn-primary"
+            style={{ marginBottom: 20 }}
+          >
+            New Movie
+          </Link>
+
           <p>Showing {filtered.length} movies in the database.</p>
 
           <MoviesTable
