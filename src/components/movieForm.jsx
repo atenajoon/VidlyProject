@@ -21,7 +21,11 @@ class MovieForm extends Form {
       .min(0)
       .max(100)
       .label("Number In Stock"),
-    rate: Joi.number().required().min(0).max(10).label("Daily Rental Rate"),
+    dailyRentalRate: Joi.number()
+      .required()
+      .min(0)
+      .max(10)
+      .label("Daily Rental Rate"),
   };
 
   componentDidMount() {
@@ -62,7 +66,7 @@ class MovieForm extends Form {
           {this.renderInput("title", "Title")}
           {this.renderSelect("genreId", "Genre", this.state.genres)}
           {this.renderInput("numberInStock", "Number In Stock", "number")}
-          {this.renderInput("rate", "Rate")}
+          {this.renderInput("dailyRentalRate", "Rate")}
           {this.renderButton("Save")}
         </form>
       </div>
